@@ -1,0 +1,10 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin bg1($size: cover, $pos: center, $repeat: no-repeat) {
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $repeat;
+}
