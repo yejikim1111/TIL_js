@@ -212,3 +212,42 @@ console.log(number); //10
 number %= 5;
 console.log(number); //
 
+console.log('--------함수');
+//함수
+//1. 내장함수
+//prompt('함수는?')
+//alert('함수는');
+//print();
+//2. 사용자정의함수
+//function 함수명(인자){반복구문}
+//Q1. html, css, js 반복출력
+//함수밖 (전역스코프) 
+let lang1 = ''
+let lang2 = ''
+let lang3 = '' //빈문자열초기화
+function study_lang(){  /* 함수 대기상태 */
+    lang1 = 'html'
+    lang2 = 'css'
+    lang3 = 'javascript'
+    console.log(`배운 언어 : ${lang1+lang2+lang3}`)
+}
+study_lang(); // 함수호출
+/* 함수는 생성과 호출을 별개로 취급한다. */
+console.log(lang1, lang2, lang3);
+lang2 = lang2 + '3';
+console.log(lang2);
+
+console.log('지역변수와 전역변수')
+let xx = 1;
+let yy = ''
+function func1(){
+    let yy = 5;
+    console.log(xx+yy)
+}
+
+function func2(){
+    let zz = 10;
+    console.log(xx+yy+zz)
+}
+func1()
+func2()
