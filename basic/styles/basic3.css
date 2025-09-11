@@ -1,17 +1,17 @@
-/* Error: Undefined mixin.
- *    ,
- * 21 |         @include flex-row;
- *    |         ^^^^^^^^^^^^^^^^^
- *    '
- *   basic\styles\basic3.scss 21:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 21 \2502          @include flex-row;\d\a    \2502          ^^^^^^^^^^^^^^^^^\a    \2575 \a   basic\\styles\\basic3.scss 21:9  root stylesheet";
+#slide_container {
+  background-color: #eee;
 }
+#slide_container .slide_wrap .slide {
+  display: none;
+}
+#slide_container .slide_wrap .slide2 {
+  display: block;
+  width: 800px;
+  height: 350px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fa23d6;
+  color: #fa2372;
+}
+
+/*# sourceMappingURL=basic3.css.map */

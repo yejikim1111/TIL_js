@@ -142,7 +142,6 @@ hello2('kim')
 
 // 익명함수 + 화살표함수(ES6)
 // 변수키워드 변수명 대입연산자 (매개변수) 화살표 {실행}}
-const hello3 () => {
-    return console.log('hello')
-}
-hello3():
+//const hello3 () => {
+//    return console.log('hello')
+//}
