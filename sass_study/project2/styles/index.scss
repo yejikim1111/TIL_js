@@ -1,0 +1,36 @@
+@use './common.scss' as*;
+
+main {
+    .slide_wrap{
+        @include pc_wh;
+        background-color: $bg-color;
+        .slide_container{
+            height:100%;
+            .slide {
+                .title_contents{
+                    h1{font-size: $font-title; font-weight: $weight-bold;}
+                    p{font-size: $font-sub; font-weight: $weight-semi; margin-top:20px}
+                }
+                .bnr_link{
+                    a {@include slide-btn; border:1px soild $btn_light;}
+                    
+                }
+            }
+            .slide1 {
+                @include bg-cover;
+                background-image: url(https://t1.kakaocdn.net/impact/juniorschool/banner/home_chun_yellow_250813.png);
+                background-size: 800px auto;
+                background-position:120% center;
+            }
+            .slide_page_btn{ 
+                @include pst-ab; top: auto; bottom:50px; left:60px;
+                .page{}
+                .btn_g{
+                }
+            }
+        }
+    
+    }
+}
+
+
