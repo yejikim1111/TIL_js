@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/index.js" defer></script>
+    <style>
+        #popup {
+            position:absolute;
+            top:50%; left:50%;
+            transform: translate(-50%, 55%) scale(0.1);
+            opacity: 0;
+        }
+        #popup svg { 
+            fill: rgba(255,255,255,0.6);
+            stroke: #f5f5f5;
+            stroke-width:5px;
+            overflow:visible;}
+    </style>
+</head>
+<body>
+    <main>
+        <!-- 팝업 -->
+        <div id="popup">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 13V11H20V13H16ZM17.2 20L14 17.6L15.2 16L18.4 18.4L17.2 20ZM15.2 8L14 6.4L17.2 4L18.4 5.6L15.2 8ZM3 15V9H7L12 4V20L7 15H3Z" fill="#1C1B1F"/>
+                </g>
+                </svg>
+                
+        </div>
+        <div class="top">
+            <a href="#" class="profile">
+                <span class="photo"></span>
+                <span class="name">username</span>
+            </a>
+            <a href="" class="more">더보기</a>
+        </div>
+        <div class="photo"></div>
+        <div class="container">
+                <div class="menu">
+                    <div class="left">
+                        <a href="#"><img src="./images/like_off.png" alt=""></a>
+                        <a href="#"><img src="./images/comment_off.png" alt=""></a>
+                        <a href="#"><img src="./images/paper_off.png" alt=""></a>
+                    </div>
+                    <a href="#" class="scrap">스크랩</a>
+                </div>
+                <div class="contents">
+                    <p class="likes">100 likes</p>
+                    <p class="name">username</p>
+                    <a href="#" class="comments">view all 20 comments</a>
+                    <p class="day">3 Days Ago</p>
+                </div>
+        </div>
+    </main>
+</body>
+</html>
