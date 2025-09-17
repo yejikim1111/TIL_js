@@ -1,0 +1,52 @@
+@use './common.scss' as *;
+
+#wrap{
+    header{ @include flex-row; height: 52px; padding: 0 80px; gap:16px;
+        border: 1px solid $color-gray-light-lv2; border-left: 0; border-right:0;
+        a{ font-size: $font-size-m; font-weight: $font-weight-bold;
+            padding: 21px 5px 15px;}
+    } main{ @include content-w; 
+        .path{ padding: 14px 0; 
+            a{ position: relative; padding-right: 12px; font-size: $font-size-s; 
+                &::after{ @include after_before; content: '>'; right: 0; left: auto; top: 3px;
+                    font-size: $font-size-xs; color: $color-gray-medium;
+                }
+                &:last-child::after {display: none;} //브래드스크럼 마지막 부분 '>' 안보이게 하기
+            }
+        }.container{ @include flex-row; align-items: flex-start;
+            .overview_img{ @include flex-row; align-items: flex-start; gap: 10px;
+                .thumnail{ @include flex-col; gap: 8px;  
+                    a { @include thumnail; overflow:hidden;
+                        img{ @include img100Percent;}
+                    }
+                } //thumnail 소이미지 끝
+                .overview { @include thumnail_big;
+                    img{ @include img100Percent;}
+                }// thumnail 큰이미지 끝
+            }
+            > .contents{margin-left: 24px; max-width: 460px;
+                svg{ fill: $color-point;} //svg 색넣어서 확인용
+                > * {margin-bottom:10px;}
+                .brand{
+                    a{ font-size: $font-size-s;}
+                }
+                .product_info{ @include flex-row; justify-content: space-between; //제목정렬
+                    h1{ font-size: $font-size-m;}
+                    .right_info{
+                        .right_icon{
+                            .scrap{
+                                .bookmark{}
+                                .span{}
+                            } //button scrap
+                            .share{} //button share
+                        }
+                    }
+                }
+                .review{} //리뷰
+                .preice_wrap{}
+                .benefit_ship{}
+                #orderFrm{}
+            }
+            }
+        } //main 끝
+}
