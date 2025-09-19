@@ -1,0 +1,70 @@
+@use './common.scss' as *;
+/* 전체 폰트 #222로 reset.css에서 변경 */
+#wrap{
+    .movebanner{width: auto; height:30px; @include test-bg1;}
+    header{height: 136px; @include flex-row; 
+        .logo_wrap{
+            #menu_btn{
+                svg{}
+            }
+            h1{}
+        }
+        .category{ justify-content: space-between;
+            a{}
+        }
+        .left_menu{ @include icon-22; @include flex-row; 
+            #search_icon{}
+            #my_icon{}
+            #cart_icon{}
+        }
+        a{}
+    }
+    .container{ @include flex-row; align-items: flex-start;
+        .overview_img{ @include flex-row; 
+            .thunmnail{ @include flex-col; gap: 10px;
+                a{@include thumnail; overflow: hidden; }
+                a img{@include img100P;}
+            }
+            .overview{ @include thumnail_main;
+                img{@include img100P;}
+            }
+        }
+        .contents{margin-left: 106px; @include test-bg2;
+            .review{font-size: $font-size-12;
+                svg{@include icon-14; fill:$color-point;}
+                span{}
+                a{}
+            }
+            .price_title{margin: 6px 0 20px 0; 
+                h1{font-size: $font-size-t-30; font-weight: $font-weight-bold; line-height: 120%;}
+                h2{font-size: $font-size-sub-t2-15; font-weight: $font-weight-medium; color: $color-gray-lv3; }
+            }
+            .price_contents{ @include flex-row; justify-content: space-between;
+                p{font-size: $font-size-sub-t2-15; font-weight: $font-weight-medium; color: $color-gray-lv3;}
+                .final_price{font-size: $font-size-t-30; font-weight: $font-weight-bold; color: $color-point; }
+                .origin_price{font-size: $font-size-18; color: $color-gray-lv1;}
+                .discount_price{}
+                span{}
+            }
+            .amount_contents{
+                p{}
+                .count_num{backgoround:$color-white; display: inline-block; padding: 5px 10px;
+                    #id{}
+                    #order_num{width:30px; text-align:center}
+                    #plus{}
+                }
+            }
+            .total_price{
+                .price{
+                    p{}
+                    span{}
+                }
+                .order_btn{
+                    #cart_btn{ @include cart_buy_btn; border: 2px solid $color-point;}
+                    #buy_btn{@include cart_buy_btn; color: $color-white; background: $color-point;}
+                    #gift_btn{width:53; height: 53px; text-align: center; background: $color-red; color: $color-white; }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+$font-size-t-30: 1.875rem;
+$font-size-sub-t-17:1.063rem;
+$font-size-sub-t2-15:0.938rem;
+$font-size-18:1.125rem;
+$font-size-12:0.75rem;
+$font-weight-medium: 500;
+$font-weight-semibold:600;
+$font-weight-bold:700;
+$color-point:#008A48;
+$color-green-lv1:#007737;
+$color-red:#E63D3D;
+$color-gray-lv1:#999;
+$color-gray-lv2:#707070;
+$color-gray-lv3:#666;
+$color-gray-lv4:#595959;
+$color-gray-lv5:#353535;
+$color-white: #fff;
+
+
+@mixin test-bg1 {background-color:aqua;}
+@mixin test-bg2 {background-color:lime;}
+@mixin test-bg3 {backgorund-color:yellow;}
+@mixin flex-row {
+    display:flex; flex-flow:row nowrap; justify-content:flex-start; align-items:center;
+}
+@mixin flex-col {
+    display:flex; flex-flow:column nowrap; justify-content:flex-start; align-items: flex-start;
+}
+@mixin icon-30 {width:30px; height:30px; display:inline-block;}
+@mixin icon-22 {width:22px; height:22px; display:inline-block;}
+@mixin icon-14 {width:14px; height:22px; display:inline-blcok;}
+@mixin img100P {width:100%; height:auto;}
+@mixin thumnail {width: 80px; height: 80px;}
+@mixin thumnail_main {width: 640px; height: 640px;}
+@mixin cart_buy_btn {width:191px; line-height: 53px; text-align: center;}

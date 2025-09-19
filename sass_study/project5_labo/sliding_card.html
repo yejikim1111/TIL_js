@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sliding_card</title>
+    <style>
+        .all {
+            width:600px; overflow:hidden;
+            background:#eee; padding:10px;
+        }
+        .all .bnr {
+            display:flex; flex-flow:row nowrap; gap:10px;
+            width:calc(500px * 2);
+            transition: transform 0.3s ease-out;
+        }
+        .all .bnr .card {
+            width:500px; height:200px; border-radius:10px;
+        }
+        .all .bnr .card1 {background:aqua;}
+        .all .bnr .card2 {background:lime;}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="bnr">
+            <div class="card1 card">1</div>
+            <div class="card2 card">2</div>
+        </div>
+    </div>
+
+    <script>
+
+        const allContainer = decument.querySelector('.all')
+        const bnrContainer = allContainer.querySelector('.bnr')
+        const card = bnrContainer.querySelectorAll('.card')
+        const cardW = card[0].offsetwidth;
+        let isDrag = false; //상태 변경 초기값 
+        let startX = 0;
+        lte startScrollLeft = 0;
+        //마우스 위치 계산 변수
+        
+        console.log(allContainer, bnrContainer, card, cardW)
+
+        allContainer.addEventLister('mosedown',(e)=>{
+            isDrag= true;
+            startX = e.pageX - allcontainer.ofeesetLeft; // 부모에서 마우스의 상대적인 좌표 저장 
+            startScrollLeft = allContainer.scrollLeft; //수평 스크롤 위치 저장 
+        })
+        allContainer.addEventLister ('mouseup', ()=>{isDrag= false;})
+        allContainer.addEventLister ('mousemove', (e)=>{
+            if(!isDrag)return;
+                console.log('실행확인')
+                const x = e.pageX; 
+                const walk = x -startX;
+                allContainer.scrallLeft = startScrollLeft - walk;
+            })
+
+    </script>
+</body>
+</html>
