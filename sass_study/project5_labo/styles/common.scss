@@ -19,16 +19,17 @@ $color-white: #fff;
 
 @mixin test-bg1 {background-color:aqua;}
 @mixin test-bg2 {background-color:lime;}
-@mixin test-bg3 {backgorund-color:yellow;}
+@mixin test-bg3 {background-color:yellow;}
 @mixin flex-row {
     display:flex; flex-flow:row nowrap; justify-content:flex-start; align-items:center;
 }
 @mixin flex-col {
     display:flex; flex-flow:column nowrap; justify-content:flex-start; align-items: flex-start;
 }
+@mixin icon-40 {width:40px; height:40px; display:inline-block;}
 @mixin icon-30 {width:30px; height:30px; display:inline-block;}
 @mixin icon-22 {width:22px; height:22px; display:inline-block;}
-@mixin icon-14 {width:14px; height:22px; display:inline-blcok;}
+@mixin icon-14 {width:14px; height:22px; display:inline-block;}
 @mixin img100P {width:100%; height:auto;}
 @mixin thumnail {width: 80px; height: 80px;}
 @mixin thumnail_main {width: 640px; height: 640px;}

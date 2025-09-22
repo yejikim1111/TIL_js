@@ -1,6 +1,7 @@
 @use './common.scss' as *;
 #wrap {
     header {
+        background: $color-white;
         height:52px; padding:0 80px;
         @include flex-row; gap:16px;
         border:1px solid $color-gray-light-lv2;
@@ -16,15 +17,15 @@
                 &:last-child::after {display:none;}
             }
         }.container {
-            @include flex-row; align-items:flex-start;
-            .overview_img {
+            @include flex-row; align-items:flex-start; 
+            .overview_img { display: abb
                 @include flex-row; align-items:flex-start; gap:10px;
-                .thumnail { @include flex-col; gap:8px;
+                .thumnail { @include flex-col; gap:8px; height:100%; 
                     a { @include thumnail; border-radius:5px; overflow:hidden;
-                        img {@include img100Percent;}
-                    }
+                        ikmg {@include img100Percent;}
+                    }ffffff
                 }.overview {
-                    @include thumnail_big;
+                    @include thumnail_big; backgorund-size:cover;
                     img {@include img100Percent;}
                 }
             }
@@ -46,7 +47,7 @@
                         }
                     }
                 }.review {@include flex-row; gap:14px; align-items:center;
-                    .score {@include flex-row; gap:2px;
+                    .score {@include flex-row; gap:2px; line-height: 2%;
                         .star {width:14px;}
                     }
                     .number {color:$color-point; font-size:$font-size-s;}
