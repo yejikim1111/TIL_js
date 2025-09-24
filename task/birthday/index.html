@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탄생화 꽃말</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+    <form>
+        <div class="contents">
+            <input type="number" id="year" name="year" value="2000">
+            <input type="number" id="month" name="month" value="6">
+            <input type="number" id="day" name="day" value="1">
+        </div>
+        <button type="button">탄생화와 꽃말은?</button>
+    </form>
+    <div class="result">
+        <p>
+            <span id="month_content"></span>
+            월의 탄생화는 
+            <span id="birth_flower"></span>
+            , 꽃말은 
+            <span id="language_flower"></span>
+            입니다.</p>
+    </div>
+    
+</body>
+</html>

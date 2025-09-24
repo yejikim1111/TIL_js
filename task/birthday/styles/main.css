@@ -1,0 +1,27 @@
+
+body {position: relative;
+    
+    background-image: url("https://cdn.pixabay.com/photo/2020/04/19/09/02/landscape-5062542_1280.jpg");
+    background-size:cover;
+}
+body::before {
+    content: "";
+    position:fixed;
+    top:0; bottom: 0; right: 0; left: 0;
+    background-color: rgba(255,255,255,0.4); z-index: -1;
+}
+
+form {
+    display: flex;  align-items: center;
+    gap : 32px; margin : 600px auto;
+}
+
+button{
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    padding: 20px 20px;
+    background: red;
+    border-radius: 15px;
+    color: #fff;
+}
