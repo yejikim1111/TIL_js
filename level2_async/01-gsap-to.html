@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+
+
+        .wrap .bg4 h1 span {opacity: 0; transform:translateY(50px);display:inline-block;}
+        @keyframes intro {
+            from{opacity: 0; trasform:scale(1.3)}
+            to{opacity: 1; trasform }
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wrap wrap1">
+            <div class="bg bg1">
+                <h1>
+                    <span>최고의 휴가를</span>
+                    <span>그랜드 조선 부산호텔과</span>
+                    <span>함께하세요</span>
+                </h1>
+            </div>
+        </div>
+        <div class="wrap wrap2">
+            <div class="bg bg2">
+                <h1>
+                    <span>최고의 휴가를</span>
+                    <span>그랜드 조선 부산호텔과</span>
+                    <span>함께하세요</span>
+                </h1>
+            </div>
+        </div>        
+        <div class="wrap wrap3">
+            <div class="bg bg3">
+                <h1>
+                    <span>최고의 휴가를</span>
+                    <span>그랜드 조선 부산호텔과</span>
+                    <span>함께하세요</span>
+                </h1>
+            </div>
+        </div>        
+        <div class="wrap wrap4">
+            <div class="bg bg4">
+                <h1>
+                    <span>최고의 휴가를</span>
+                    <span>그랜드 조선 부산호텔과</span>
+                    <span>함께하세요</span>
+                </h1>
+            </div>
+        </div>
+
+        
+
+
+        <section class="bg bg1">
+            <h1>그랜드 조선 호텔 부산</h1>
+            <img src="https://gjb.josunhotel.com/static/home/images/ko/pc/BSMA/img_main02_01.jpg" alt="">
+        </section>
+        <section class="bg bg2">
+            <h1>그랜드 조선 호텔 부산</h1>
+            <img src="https://gjb.josunhotel.com/static/home/images/ko/pc/BSMA/img_main02_02.jpg" alt="">
+        </section>
+        <section class="bg bg3">
+            <h1>그랜드 조선 호텔 부산 </h1>
+            <img src="https://gjb.josunhotel.com/static/home/images/ko/pc/BSMA/img_main02_02.jpg" alt="">
+        </section>
+        <section class="bg bg4">
+            <h1>그랜드 조선 호텔 부산</h1>
+            <img src="https://gjb.josunhotel.com/revolution/content/fileImage.do?fileId=252133&cntntsSn=252126" alt="">
+        </section>
+    </main>
+
+
+    <script>
+        gsap.registerPlugin(scrollTrigger)
+
+        /* gsap.to('.bg1 h1', {
+            scrollTrigger:gsapToTrigger('.bg1'),
+            x:300, y:200,
+        })
+
+        gsap.to('.bg2 h1', {
+            scrollTrigger:gsapToTrigger('.bg2'),
+            x:300, y:200,
+        })
+
+        gsap.to('.bg3 h1', {
+            scrollTrigger:gsapToTrigger('.bg3'),
+            x:300, y:200,
+        })
+
+        gsap.to('.bg4 h1', {
+            scrollTrigger:gsapToTrigger('.bg4'),
+            x:300, y:200,
+        }) */
+    //span1 바로 시작, 아래 -> 위(제자리) 1초 진행
+    //span2 1초 후 시작, 아래 -> 위(제자리) 1초 진행 
+    //span3 2초 후 시작, 아래 -> 위(제자리) 1초 진행 
+    gsap.to('.bg4 h1 span:fisrt-child',{
+            scrollTrigger:gsapToTrigger('.bg4'),
+            opacity:1, y:0, duration:1;
+        })
+    gsap.to('.bg4 h1 span:nth-of-type(2)',{
+            scrollTrigger:gsapToTrigger('.bg4'),
+            opacity:1, y:0, duration:1, delay:1,
+        })
+    gsap.to('.bg4 h1 span:nth-of-type(3)',{
+            scrollTrigger:gsapToTrigger('.bg4'),
+            opacity:1, y:0, duration:1, delay:2,
+        })
+
+    function gsapToTrigger(target, action='play none none none'){
+        return{
+            trigger:target,
+            start:'top 80%',
+            markers:ture,
+            toggleActions:action,
+        }
+    }
+
+
+    </script>
+</body>
+</html>

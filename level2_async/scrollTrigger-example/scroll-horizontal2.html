@@ -1,0 +1,82 @@
+<!-- scroll-horizontal2 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | 가로스크롤트리거활용 </title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <style>
+        body {overflow-x: hidden;}
+        .wrap {height:100vh;}
+        .bg{height: 100%;  background-position: center; background-attachment: fixed; background-size:cover; overflow: hidden;}
+        .bg1{background-image:url(../images/lush_bg001.jpg);} 
+        .bg2{background-image:url(../images/lush_bg002.jpg);} 
+        .bg3{background-image:url(../images/lush_bg003.jpg);} 
+        
+        .txt {color:#fff; font-size: 1.25rem; line-height: 1.4; text-align: center;}
+        h1.txt {font-size: 2rem; font-weight: 1000;}
+        h2.txt {font-weight: 1000; color:#922720;}
+        .txt span {color:#9b5a55; font-size:1rem; margin: 15px;}
+        .wrap {height: 100vh;}
+        .container {display: flex; width:400vh;}
+        .container img {width:100vh;}
+        .wrap.bg1 { text-align: center;  }
+        .wrap.bg1 h1 {font-size: 3rem; font-weight: 1000;}
+        .bg h1{}
+        .bg h2{}
+        .bg p{}
+
+    </style>
+</head>
+<body>
+    <main>
+        <!-- 주제 향수나 패션 브랜드  -->
+        <section class="wrap bg1">
+            <h1>LUSH</h1>
+            <p class="txt">굿 카마</p>
+        </section>
+        <section class="wrap bg2">
+            <h1 class="txt">굿 카마</h1>
+            <p class="txt">GOOD KARMA</p>
+            <h2 class="txt">굿 카마...에브리 바디 니즈 썸 <span>샤워 젤</span></h2>
+            <h2 class="txt">오렌지<span>보디스크럽</span></h2>
+            <h2 class="txt">카마<span>솝</span></h2>
+            <p class="txt">
+                포근한 날씨엔 오렌지의 달콤함이, <br>
+                쌀쌀한 날씨엔 파촐리의 알싸함이 더욱 잘 느껴지거든요. <br>
+                베스트 셀러 카마 3종을 기프트로 엮었습니다. <br>
+                소중한 사람에게 선물해보세요, 후회하지 않으실 거예요! 
+            </p>
+            <p class="txt">58,000</p>
+        </section>
+        <div class="container">
+            <img src="../images/lush_bgS001.jpg" alt="">
+            <img src="../images/lush_bgS002.png" alt="">
+            <img src="../images/lush_bgS003.jpg" alt="">
+            <img src="../images/lush_bgS004.jpg" alt="">
+        </div>
+        <section class="wrap bg3">
+            <h1 class="txt">
+                러쉬의 기프트는 <br>
+                소중한 사람을 위해 존재합니다. 
+            </h1>
+            <p class="txt">
+                특별한 순간을 기념하고, 고마움을 표현하고, 응원하는 마음을 전달해 보세요.<br>
+                기분좋은 태양의 에너지를 품고 있는 카마 트리오를 욕실에 초대해 주세요.<br>
+                오늘을 가장 향기롭게 기억하는 방법, 굿 카마 기프트 속에 그 힌트가 있습니다.
+            </p>
+        </section>        
+    </main>
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        const container = document.querySelector('.container')
+        const scrollW = container.offsetWidth - window.innerWidth;
+
+
+
+    </script>
+</body>
+</html>

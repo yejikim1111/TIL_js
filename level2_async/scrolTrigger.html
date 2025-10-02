@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        body, html{
+            height: 300vh;
+            background: linear-gradient()
+        }
+        maing .bg{height: 90vh; overflow: hidden;}
+    </style>
+</head>
+<body>
+    <main>
+        <section class="bg bg1">
+            <h1>그랜드 조선 호텔 부산</h1>
+            <img src="https://gjb.josunhotel.com/static/home/images/ko/pc/BSMA/img_main02_01.jpg" alt="">
+        </section>
+        <section class="bg bg2">
+            <h1>그랜드 조선 호텔 부산</h1>
+            <img src="https://gjb.josunhotel.com/static/home/images/ko/pc/BSMA/img_main02_02.jpg" alt="">
+        </section>
+        <section class="bg bg3">
+            <h1>그랜드 조선 호텔 부산 </h1>
+            <img src="https://gjb.josunhotel.com/static/home/images/ko/pc/BSMA/img_main02_02.jpg" alt="">
+        </section>
+        <section class="bg bg4">
+            <h1>그랜드 조선 호텔 부산</h1>
+            <img src="https://gjb.josunhotel.com/revolution/content/fileImage.do?fileId=252133&cntntsSn=252126" alt="">
+        </section>
+    </main>
+
+
+    <script>
+        gsap.registerPlugin(scrollTrigger)
+
+        gsap.to('.bg1 h1', {
+            scrollTrigger:gsapToTrigger('.bg1'),
+            x:300, y:200,
+        })
+
+        gsap.to('.bg2 h1', {
+            scrollTrigger:gsapToTrigger('.bg2'),
+            x:300, y:200,
+        })
+
+        gsap.to('.bg3 h1', {
+            scrollTrigger:gsapToTrigger('.bg3'),
+            x:300, y:200,
+        })
+
+        gsap.to('.bg4 h1', {
+            scrollTrigger:gsapToTrigger('.bg4'),
+            x:300, y:200,
+        })
+    function gsapToTrigger(target, action='play none none none'){
+        return{
+            trigger:target,
+            start:'top 80%',
+            markers:ture,
+            toggleActions:action,
+        }
+    }
+
+
+    </script>
+</body>
+</html>

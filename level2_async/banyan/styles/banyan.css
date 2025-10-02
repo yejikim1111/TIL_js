@@ -1,0 +1,54 @@
+@keyframes bg {
+    0%{background-size: 200% auto;}
+    100%{background-size: 180% auto;}
+}
+@keyframes title {
+    0%{transform:scale(2); opacity:0;}
+    100%{transform:scale(1); opacity:1;}
+}
+
+.popup{ 
+    padding: 10px 20px; border: 2px solid #fff; border-radius: 10px; 
+    display: flex; position: fixed; right: 30px; bottom: 20px;
+}
+.popup .reservation {color:#fff; font-weight: 700}
+
+header {
+    height:100px; width:100%; padding: 0 100px; 
+    display:flex; flex-flow: row nowrap; justify-content: space-between; align-items: center; 
+    position: fixed; z-index: 999; 
+
+}
+header h1 a img {width:173px; height: 62px;}
+header .left_memu a {color:#fff;}
+.wrap {
+    width:100%; height:100vh; overflow:hidden;
+}
+.bg{
+height: 100%; 
+background-size: cover; background-position: center; background-attachment: fixed;
+}
+
+.bg1 {
+    background-image:url(../banyanTree_images/main_bg_new2.jpg);
+    background-size: 200% auto; animation: bg 1.5s ease both; 
+    display: flex; justify-content: center; align-items: center;
+}
+.bg2 {background-image:url(../banyanTree_images/main_con2_bg.jpg);}
+.bg3 {background-image:url(../banyanTree_images/main_con3_bg.jpg);}
+.bg4 {background-image:url(../banyanTree_images/main_con5_bg-.jpg);}
+
+.wrap .contentTxt{padding: 100px 100px;}
+.wrap h1,
+.wrap .contentTxt h1{font-size: 3rem; color: #fff;}
+.wrap .contentTxt h2{font-size: 3rem; color: #fff;}
+.wrap .contentTxt p{margin : 20px 0 0; font-size:1.25rem; color:#eee; color: #fff; line-height: 2;}
+.wrap h1 {animation:title 2s both;}
+footer{
+    background: #000; 
+    width:100%; height: 150px; color:#fff; 
+    display:flex; flex-flow:row nowrap; justify-content: space-around; align-items: center;
+}
+footer p {color:#aaa;}
+
+/* text-transform:uppercase 소문자 ->대문자로 바꿔줌  */

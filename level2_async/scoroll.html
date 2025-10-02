@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    main {
+            height: 300vh; background:linear-gradient(beige, coral, pink, orange); }
+    #top {position:fixed; right:20px; bottom:20px;}
+    .bnr{background:hotpink;height: 50px;}
+    header{background:#fff; height:50px; position:relative; z-index: 999;}
+    main .title{position: sticky; top:0; background:skyblue; height: 50px;}
+/*     stickly실행조건:sticky적용 대상의 부모가 뷰포트보다 커야함 */
+</style>
+</head>
+
+<body>
+    <button type="button" id="top">위로</button>
+    <div class="bnr">광고</div>
+    <header>header</header>
+    <main>
+        <div class="title">
+            <a href="#">책 소개</a>
+            <a href="#">리뷰</a>
+            <a href="#">배송정보</a>
+        </div>
+        <div class="contents" style="height:80vh">책 내용 </div>
+        <div class="contents" style="height:80vh">내용 </div>
+        <div class="contents" style="height:80vh">배송 내용 </div>
+    </main>
+
+    <script>
+        const topBtn = document.querySelector('#top')
+        const 
+
+        //스크롤 이벤트
+        window.addEventListener('scroll',()=>{
+            if(window.pageTOffest > 50){
+                header.classList.add('header_fixed')
+/*                 header.style.position = 'fixed'
+                header.style.top = '0'
+                header.style.width = '100%' */
+            }else{
+                header.classList.remove('header_fixed')
+                //header.style.position = 'relative'
+            }
+        })
+
+/*       window.addEventListner('scroll',()=>{
+            console.log(window.pageYOffset)
+            if(window.pageYOffset > 300) console.log('현재 위치는 300보다 크다')
+            dfjdigmdg clcefkdegornd,
+        })
+ */
+        //객체.forEach(function(obj,idx,arr){반복실행})
+        titleA.forEach((o,i,a)=>{
+            o.addEventListener('click',(e)=>{
+                e.preventDefault();
+                window.scrollTo(0, contents[i].offsetTop-70)
+            })
+        })
+    </script>
+</body>
+</html>
